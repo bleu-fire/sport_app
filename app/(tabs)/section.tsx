@@ -1,19 +1,18 @@
 import { Pressable, Text, View, StyleSheet } from "react-native";
-import { Heart, Flame, Timer } from "lucide-react-native";
+import { Heart, Flame, Timer, Play, Pause, RotateCcw } from "lucide-react-native";
 import Card from "@/components/Card";
 import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useState, useEffect, useRef } from "react";
 
 export default function Section() {
-
-
-  return (
-  <SafeAreaView style={styles.container}>
-      <View>
-       
-      </View>
-  </SafeAreaView>
-  );
+return(
+  <View style={styles.container}>
+    <Text>
+      helloo
+    </Text>
+  </View>
+);
 }
 
 const styles = StyleSheet.create({
@@ -33,10 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  //  Typography 
+  //  Typography
   textPrimary: {
     fontSize: 18,
-     fontWeight: "bold", 
+     fontWeight: "bold",
     marginBottom: 8,
     color: "#FFFFFF",
     },
@@ -45,4 +44,40 @@ const styles = StyleSheet.create({
      color: "#BDC5E9",
     textAlign: "center",
   },
+
+  // Timer
+  timerDisplay: {
+    fontSize: 48,
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    marginVertical: 16,
+    fontVariant: ["tabular-nums"],
+  },
+  timerButtons: {
+    flexDirection: "row",
+    gap: 12,
+  },
+  timerBtn: {
+    padding: 12,
+    borderRadius: 12,
+    minWidth: 48,
+    minHeight: 48,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  startBtn: {
+    backgroundColor: "#2e507d",
+  },
+  pauseBtn: {
+    backgroundColor: "#17aff5",
+  },
+  resetBtn: {
+    backgroundColor: "#be39be",
+  },
+  timerBtnText: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
 });
+
